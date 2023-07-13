@@ -7,6 +7,12 @@
         <script src="https://cdn.staticfile.org/popper.js/2.9.3/umd/popper.min.js"></script>
         <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
         <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("iframe").attr("src") = "./Date/test.txt";
+            });
+        </script>
         <meta charset="utf-8">
         <title>杰哥慢</title>  
     </head>
@@ -25,8 +31,33 @@
                 </nav>
             </div>
             <div class="row">
-                <div class="col-2">左边导航</div>
-                <div class="col-10">内容显示</div>
+                <div class="col-2">
+                    <div id="accordion">
+                        <div class="card">
+                            <div class="card-header btn" data-bs-toggle="collapse" href="#collapseOne">
+                                文档
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                磁盘空间分配
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-header btn" data-bs-toggle="collapse" href="#collapseTwo">
+                                程序
+                            </div>
+                             <div id="collapseTwo" class="collapse" data-bs-parent="#accordion">
+                                <div class="card-body">
+                                植物名称查询
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <iframe class="col-12" src="./Date/test.txt">尝试</iframe>
+                </div>
             </div>
         </div>
     </body>
